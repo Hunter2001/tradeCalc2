@@ -215,11 +215,13 @@ body {
     color: #49538f;
     background-color: #49538f;
     width: 100%;
+    position: relative;
+    top: 3rem;
   }
 
   .copy {
     position: relative;
-    top: 2rem;
+    top: 5rem;
     left: 6rem;
     width: 15rem;
     height: 3rem;
@@ -237,6 +239,7 @@ body {
   .copy p {
     position: relative;
     top: 0.5rem;
+    text-align: center;
   }
 
   .button p {

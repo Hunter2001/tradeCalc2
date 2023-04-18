@@ -1,22 +1,26 @@
 import * as model from "./model.js";
 import buttonsView from "./views/buttonsView";
 
-// const controlButton = function (show = true) {
-//   if (show) {
-//     buttonsView.showPopup();
-//     buttonsView.changeCopyButtonText();
-//   }
+const controlData = function () {
+  // Get data from inputs
+  const data = buttonsView.getData();
 
-//   if (!show) {
-//     buttonsView.hidePopup();
-//   }
-// };
+  // Calculate the data and copy to clipboard
+  model.setValues(data);
+  model.calculatePosition();
+  model.copyToClipboard(model.state.position);
+
+  // Change the value in modal window
+  buttonsView.setPosition(model.state.position);
+};
 
 const controlCopyButton = function () {
-  //
+  model.copyToClipboard(model.state.position);
+  buttonsView.changeCopyButtonText();
 };
 
 const init = function () {
-  //   buttonsView.addHandlerClick(controlButton);
+  buttonsView.addHandlerGetData(controlData);
+  buttonsView.addHandlerCopyBtn(controlCopyButton);
 };
 init();

@@ -8,25 +8,23 @@ class buttonsView {
   _popup = document.querySelector(".popup");
   _container = document.querySelector(".container");
   _overlay = document.querySelector(".overlay");
-  _changeCopyButtonTextTimer;
+  _position = document.querySelector(".position");
+  changeCopyButtonTextTimer;
 
   constructor() {
     this._addHandlerShowWindow();
     this._addHandlerHideWindow();
-    this._addHandlerCopyBtn();
+    this.addHandlerCopyBtn();
   }
 
   toggleWindow() {
     this._overlay.classList.toggle("hidden");
     this._popup.classList.toggle("hidden");
-    this._changeCopyButtonText();
+    this.changeCopyButtonText();
   }
 
-  _addHandlerCopyBtn() {
-    this._btnCopy.addEventListener(
-      "click",
-      this._changeCopyButtonText.bind(this)
-    );
+  addHandlerCopyBtn(handler = undefined) {
+    this._btnCopy.addEventListener("click", handler);
   }
 
   _addHandlerShowWindow() {
@@ -38,12 +36,29 @@ class buttonsView {
     this._overlay.addEventListener("click", this.toggleWindow.bind(this));
   }
 
-  _changeCopyButtonText() {
-    clearTimeout(this._changeCopyButtonTextTimer);
+  changeCopyButtonText() {
+    clearTimeout(this.changeCopyButtonTextTimer);
     this._btnCopyText.textContent = "Copied to clipboard ✔";
-    this._changeCopyButtonTextTimer = setTimeout(() => {
+    this.changeCopyButtonTextTimer = setTimeout(() => {
       this._btnCopyText.textContent = "Copy";
     }, TIMEOUT_SEC * 1000);
+  }
+
+  getData() {
+    const deposit = +document.getElementById("deposit").value;
+    const risk = +document.getElementById("risk").value;
+    const stop = +document.getElementById("stop").value;
+    return { deposit, risk, stop };
+  }
+
+  addHandlerGetData(handler) {
+    this._btnOpen.addEventListener("click", function () {
+      handler();
+    });
+  }
+
+  setPosition(positionValue) {
+    this._position.textContent = `$${positionValue}`;
   }
 }
 
