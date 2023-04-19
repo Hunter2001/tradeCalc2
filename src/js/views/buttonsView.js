@@ -45,10 +45,14 @@ class buttonsView {
   }
 
   getData() {
+    // SELECT ELEMENT
+    const select = document.getElementById("broker");
+    // DATA
     const deposit = +document.getElementById("deposit").value;
     const risk = +document.getElementById("risk").value;
     const stop = +document.getElementById("stop").value;
-    return { deposit, risk, stop };
+    const broker = select.options[select.selectedIndex].value;
+    return { deposit, risk, stop, broker };
   }
 
   addHandlerGetData(handler) {

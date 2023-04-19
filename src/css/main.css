@@ -69,14 +69,26 @@ body {
   top: 3rem;
 }
 
-.input-group {
-  margin-top: -0.5rem;
-  position: relative;
-  top: 2rem;
-}
 /* ====================================================================================================================STYLE FOR SMALL SCREENS */
 @media screen and (min-width: 320px) {
   /* Style for small screens */
+
+  .input-group {
+    margin-top: -0.5rem;
+    position: relative;
+    top: -1rem;
+  }
+
+  .input-form .button {
+    background-color: #1a4f5d;
+    color: white;
+    font-weight: normal;
+    cursor: pointer;
+    border-color: #04e9be;
+    position: relative;
+    top: 0rem;
+  }
+
   .input-form {
     padding: 5rem;
     /* height: 100vh; */
@@ -91,7 +103,7 @@ body {
     font-size: 1.5rem;
     font-family: sans-serif;
     position: relative;
-    top: -1rem;
+    top: -3rem;
     left: 0rem;
     text-align: center;
   }
@@ -189,6 +201,36 @@ body {
     position: relative;
     left: 0rem;
     text-align: center;
+  }
+
+  /* ========================= COMMISION RATE */
+  .commission {
+    position: relative;
+    top: -8rem;
+    text-align: center;
+    font-size: 0.8rem;
+  }
+
+  .commission select {
+    display: inline;
+    background-color: #30365a;
+    border: none;
+    color: #489bf8;
+    outline: none;
+  }
+
+  .commission p {
+    display: inline;
+    font-family: Consolas;
+  }
+}
+/* MOBILE L */
+@media screen and (min-width: 425px) {
+  .commission {
+    position: relative;
+    top: -7.6rem;
+    text-align: center;
+    font-size: 0.8rem;
   }
 }
 /* ===========================================================================================================================MEDIUM SCREENS */
@@ -331,6 +373,26 @@ body {
     position: relative;
     left: 0rem;
     text-align: center;
+  }
+  /* ========================= COMMISION RATE */
+  .commission {
+    position: relative;
+    top: -7.6rem;
+    text-align: left;
+    font-size: 1rem;
+  }
+
+  .commission select {
+    display: inline;
+    background-color: #30365a;
+    border: none;
+    color: #489bf8;
+    outline: none;
+  }
+
+  .commission p {
+    display: inline;
+    font-family: Consolas;
   }
 }
 
