@@ -225,7 +225,7 @@ body {
   }
 }
 /* MOBILE L */
-@media screen and (min-width: 425px) {
+@media screen and (min-width: 380px) {
   .commission {
     position: relative;
     top: -7.6rem;
