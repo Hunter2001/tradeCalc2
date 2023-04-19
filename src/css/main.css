@@ -74,7 +74,7 @@ body {
   position: relative;
   top: 2rem;
 }
-
+/* ====================================================================================================================STYLE FOR SMALL SCREENS */
 @media screen and (min-width: 320px) {
   /* Style for small screens */
   .input-form {
@@ -104,10 +104,94 @@ body {
     color: #489bf8;
     font-family: Consolas;
   }
+
+  /* =============================POPUP */
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    z-index: 9999;
+    display: block;
+    width: 18rem;
+    height: 15rem;
+    background-color: #30365a;
+  }
+
+  .popup.show {
+    display: block;
+  }
+  /* ==============CLOSE BUTTON POPUP */
+  .popup .close {
+    position: absolute;
+    top: -0.7rem;
+    right: 0.4rem;
+    font-size: 2.5rem;
+    color: #999;
+    cursor: pointer;
+  }
+
+  /* =====================POSITION NUMBER TEXT POPUP */
+  .popup .content h1 {
+    position: relative;
+    top: 0rem;
+    font-size: 4.5rem;
+    color: #4a9cff;
+    font-family: Consolas;
+  }
+
+  /* =============== TOP TEXT OF POPUP */
+  .popup .content .text {
+    position: relative;
+    top: 1rem;
+    text-align: center;
+    font-family: Consolas;
+    font-size: 1.1em;
+  }
+  /* =======================DIVIDER POPUP */
+  .solid {
+    border-top: 0.1rem solid #49538f;
+    color: #49538f;
+    background-color: #49538f;
+    width: 100%;
+    position: relative;
+    top: 0rem;
+  }
+  /* ===============================COPY BUTTON POPUP */
+  .copy {
+    position: relative;
+    top: 1rem;
+    left: 1.65rem;
+    width: 12rem;
+    height: 2.5rem;
+    border: 1px solid;
+    font-size: 1rem;
+    color: #828aaf;
+    background-color: #1a4f5d;
+    color: white;
+    font-weight: normal;
+    cursor: pointer;
+    border-color: #04e9be;
+    border-radius: 0.5rem;
+  }
+  /* COPY BUTTON TEXT */
+  .copy p {
+    position: relative;
+    top: 0.5rem;
+    text-align: center;
+  }
+
+  /* ==================== CALCULATE BUTTON TEXT */
   .button p {
+    position: relative;
+    left: 0rem;
     text-align: center;
   }
 }
+/* ===========================================================================================================================MEDIUM SCREENS */
 
 @media screen and (min-width: 576px) {
   /* Style for small screens */
@@ -125,6 +209,7 @@ body {
   }
 }
 
+/* ==============================================================================================================BIG SCREENS */
 @media screen and (min-width: 768px) {
   /* Style for medium screens */
   .input-form {
@@ -193,7 +278,7 @@ body {
     color: #999;
     cursor: pointer;
   }
-
+  /* =====================POSITION NUMBER TEXT POPUP */
   .popup .content h1 {
     position: relative;
     top: 3.5rem;
@@ -201,7 +286,7 @@ body {
     color: #4a9cff;
     font-family: Consolas;
   }
-
+  /* =============== TOP TEXT OF POPUP */
   .popup .content .text {
     position: relative;
     top: 3.5rem;
@@ -209,7 +294,7 @@ body {
     font-family: Consolas;
     font-size: 1.5rem;
   }
-
+  /* =======================DIVIDER POPUP */
   .solid {
     border-top: 0.1rem solid #49538f;
     color: #49538f;
@@ -218,7 +303,7 @@ body {
     position: relative;
     top: 3rem;
   }
-
+  /* ===============================COPY BUTTON POPUP */
   .copy {
     position: relative;
     top: 5rem;
@@ -235,13 +320,13 @@ body {
     border-color: #04e9be;
     border-radius: 0.5rem;
   }
-
+  /* COPY BUTTON TEXT */
   .copy p {
     position: relative;
     top: 0.5rem;
     text-align: center;
   }
-
+  /* ==================== CALCULATE BUTTON TEXT */
   .button p {
     position: relative;
     left: 0rem;
