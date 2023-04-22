@@ -19,6 +19,7 @@ const controlCopyButton = function () {
   buttonsView.changeCopyButtonText();
 };
 
+// Init
 const init = function () {
   buttonsView.addHandlerGetData(controlData);
   buttonsView.addHandlerCopyBtn(controlCopyButton);
